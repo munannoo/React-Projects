@@ -39,7 +39,7 @@ function LoadMore() {
       <div className="productContainer">
         {products && products.length
           ? products.map((item) => (
-              <div id="test" className="item" key={item.id}>
+              <div className="item" key={item.id}>
                 <img src={item.thumbnail} alt={item.title} />
                 <p>{item.title}</p>
               </div>
