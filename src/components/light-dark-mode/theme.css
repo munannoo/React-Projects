@@ -1,0 +1,23 @@
+:root {
+  --primary-color: whitesmoke;
+  --button-bg: whitesmoke;
+  --button-txt: #1a1a1a;
+  --bgColor: #242424;
+}
+
+[data-theme="light"] {
+  --bgColor: whitesmoke;
+  --primary-color: #242424;
+  --button-bg: #1a1a1a;
+  --button-txt: whitesmoke;
+}
+
+.pageContainer {
+  background-color: var(--bgColor);
+  color: var(--primary-color);
+}
+
+button {
+  background-color: var(--button-bg);
+  color: var(--button-txt);
+}
