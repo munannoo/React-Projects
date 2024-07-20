@@ -10,17 +10,21 @@ export default function Tabs({ tabsContent, onChange }) {
 
   return (
     <div className="wrapper">
-      {tabsContent.map((tabItem, index) => {
-        return (
-          <div
-            className="heading"
-            onClick={() => handleOnClick(index)}
-            key={index}
-          >
-            {tabItem.label}
-          </div>
-        );
-      })}
+      <div className="headingComponent">
+        {tabsContent.map((tabItem, index) => {
+          return (
+            <div
+              className={`heading ${
+                index === currentIndex ? "active" : "inactive"
+              }`}
+              onClick={() => handleOnClick(index)}
+              key={index}
+            >
+              {tabItem.label}
+            </div>
+          );
+        })}
+      </div>
 
       <div className="content">
         {tabsContent[currentIndex] && tabsContent[currentIndex].content}
