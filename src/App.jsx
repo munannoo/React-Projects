@@ -5,6 +5,7 @@ import ImgSlider from "./components/img-slider/imgSlider.jsx";
 import LoadMore from "./components/load-more-content/loadMore.jsx";
 import LightDarkMode from "./components/light-dark-mode/lightDark.jsx";
 import TabsTest from "./components/tabs/tabsParent.jsx";
+import ModalPopUp from "./components/modal-popup/modal.jsx";
 function App() {
   return (
     <>
@@ -13,7 +14,8 @@ function App() {
       {/* <ImgSlider url={"https://picsum.photos/v2/list"} page={1} limit={5} /> */}
       {/* <LoadMore /> */}
       {/* <LightDarkMode /> */}
-      <TabsTest />
+      {/* <TabsTest /> */}
+      <ModalPopUp />
     </>
   );
 }
