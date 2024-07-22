@@ -6,6 +6,7 @@ import LoadMore from "./components/load-more-content/loadMore.jsx";
 import LightDarkMode from "./components/light-dark-mode/lightDark.jsx";
 import TabsTest from "./components/tabs/tabsParent.jsx";
 import ModalPopUp from "./components/modal-popup/modal.jsx";
+import QrGenerator from "./components/qr-generator/qrGenerator.jsx";
 function App() {
   return (
     <>
@@ -15,7 +16,8 @@ function App() {
       {/* <LoadMore /> */}
       {/* <LightDarkMode /> */}
       {/* <TabsTest /> */}
-      <ModalPopUp />
+      {/* <ModalPopUp /> */}
+      <QrGenerator />
     </>
   );
 }
