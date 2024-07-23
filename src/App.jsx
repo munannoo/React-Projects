@@ -7,6 +7,7 @@ import LightDarkMode from "./components/light-dark-mode/lightDark.jsx";
 import TabsTest from "./components/tabs/tabsParent.jsx";
 import ModalPopUp from "./components/modal-popup/modal.jsx";
 import QrGenerator from "./components/qr-generator/qrGenerator.jsx";
+import SearchAutoComplete from "./components/search-autocomplete/autoCompleteSearch.jsx";
 function App() {
   return (
     <>
@@ -17,7 +18,8 @@ function App() {
       {/* <LightDarkMode /> */}
       {/* <TabsTest /> */}
       {/* <ModalPopUp /> */}
-      <QrGenerator />
+      {/* <QrGenerator /> */}
+      <SearchAutoComplete />
     </>
   );
 }
