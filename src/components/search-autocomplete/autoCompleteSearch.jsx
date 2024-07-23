@@ -4,6 +4,24 @@ export default function SearchAutoComplete() {
   const [loading, setLoading] = useState(false);
   const [users, setUsers] = useState([]);
   const [error, setError] = useState(null);
+  const [searchParam, setsearchParam] = useState("");
+  const [showDropDown, setShowDropDown] = useState(false);
+  const [filteredUsers, setFilteredUsers] = useState([]);
+
+  function handleChange(e) {
+    const query = e.target.value.toLowerCase();
+    setsearchParam(query);
+    if (query.length > 1) {
+      const filteredData =
+        users && users.length
+          ? users.filter((item) => item.toLowerCase().indexOf(query) > -1)
+          : [];
+      setFilteredUsers(filteredData);
+      setShowDropDown(true);
+    } else setShowDropDown(false);
+  }
+
+  console.log(filteredUsers);
 
   async function fetchListofUsers() {
     try {
@@ -26,7 +44,13 @@ export default function SearchAutoComplete() {
   }, []);
   return (
     <div className="searchContainer">
-      <input type="text" name="search" placeholder="search users" />
+      <input
+        onChange={handleChange}
+        value={searchParam}
+        type="text"
+        name="search"
+        placeholder="search users"
+      />
     </div>
   );
 }
