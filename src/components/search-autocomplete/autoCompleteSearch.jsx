@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import ListOfSearches from "./filteredSearches.jsx";
 
 export default function SearchAutoComplete() {
   const [loading, setLoading] = useState(false);
@@ -44,13 +45,19 @@ export default function SearchAutoComplete() {
   }, []);
   return (
     <div className="searchContainer">
-      <input
-        onChange={handleChange}
-        value={searchParam}
-        type="text"
-        name="search"
-        placeholder="search users"
-      />
+      {loading ? (
+        "loading data please wait..."
+      ) : (
+        <input
+          onChange={handleChange}
+          value={searchParam}
+          type="text"
+          name="search"
+          placeholder="search users"
+        />
+      )}
+
+      {showDropDown ? <ListOfSearches data={filteredUsers} /> : null}
     </div>
   );
 }
