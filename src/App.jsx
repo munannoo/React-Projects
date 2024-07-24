@@ -9,6 +9,7 @@ import ModalPopUp from "./components/modal-popup/modal.jsx";
 import QrGenerator from "./components/qr-generator/qrGenerator.jsx";
 import SearchAutoComplete from "./components/search-autocomplete/autoCompleteSearch.jsx";
 import TreeStructure from "./components/tree-view/treeView.jsx";
+import menus from "./components/tree-view/data.js";
 function App() {
   return (
     <>
@@ -21,7 +22,7 @@ function App() {
       {/* <ModalPopUp /> */}
       {/* <QrGenerator /> */}
       {/* <SearchAutoComplete /> */}
-      <TreeStructure />
+      <TreeStructure menus={menus} />
     </>
   );
 }
