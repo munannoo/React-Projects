@@ -8,6 +8,7 @@ import TabsTest from "./components/tabs/tabsParent.jsx";
 import ModalPopUp from "./components/modal-popup/modal.jsx";
 import QrGenerator from "./components/qr-generator/qrGenerator.jsx";
 import SearchAutoComplete from "./components/search-autocomplete/autoCompleteSearch.jsx";
+import TreeStructure from "./components/tree-view/treeView.jsx";
 function App() {
   return (
     <>
@@ -19,7 +20,8 @@ function App() {
       {/* <TabsTest /> */}
       {/* <ModalPopUp /> */}
       {/* <QrGenerator /> */}
-      <SearchAutoComplete />
+      {/* <SearchAutoComplete /> */}
+      <TreeStructure />
     </>
   );
 }
