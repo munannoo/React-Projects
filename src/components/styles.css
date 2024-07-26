@@ -207,3 +207,21 @@ p {
 .modal-container > .footer {
   background-color: darkcyan;
 }
+
+.scrollProgressContainer {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  background-color: darkblue;
+  width: 100%;
+  text-align: center;
+}
+
+.dataContainer {
+  margin-top: 10rem;
+}
+
+.scrollBar {
+  background-color: white;
+  height: 1rem;
+}

@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
+import "../styles.css";
 
 export default function ScrollIndicator({ url }) {
   const [loading, setLoading] = useState(false);
@@ -47,9 +48,8 @@ export default function ScrollIndicator({ url }) {
 
   return (
     <div className="scrollContainer">
-      {loading ? <div>loading data pls wait!</div> : null}
-      <h1>SCROLL INDICATOR</h1>
       <div className="scrollProgressContainer">
+        <h1>SCROLL INDICATOR</h1>
         <div
           className="scrollBar"
           style={{ width: `${scrollPercentage}%` }}
