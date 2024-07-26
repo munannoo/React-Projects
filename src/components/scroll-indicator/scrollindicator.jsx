@@ -22,6 +22,7 @@ export default function ScrollIndicator({ url }) {
     } catch (e) {
       setError(e.error);
       console.log(e.error);
+      setLoading(false);
     }
   }
 
@@ -45,6 +46,14 @@ export default function ScrollIndicator({ url }) {
 
     return () => window.removeEventListener("scroll", () => {});
   });
+
+  if (loading) {
+    return <div>loading data pls wait!</div>;
+  }
+
+  if (error) {
+    return <div>an error occured while fetching the data!</div>;
+  }
 
   return (
     <div className="scrollContainer">
