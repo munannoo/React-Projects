@@ -5,6 +5,7 @@ export default function ScrollIndicator({ url }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [displayData, setDisplayData] = useState([]);
+  const [scrollPercentage, setScrollPercentage] = useState(0);
 
   async function handleFetchData(getUrl) {
     try {
@@ -23,14 +24,37 @@ export default function ScrollIndicator({ url }) {
     }
   }
 
+  function handleScrollPercentage() {
+    const howMuchScrolled =
+      document.body.scrollTop || document.documentElement.scrollTop;
+    const height =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+
+    setScrollPercentage((howMuchScrolled / height) * 100);
+    console.log(scrollPercentage);
+  }
+
   useEffect(() => {
     handleFetchData(url);
   }, [url]);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScrollPercentage);
+
+    return () => window.removeEventListener("scroll", () => {});
+  });
 
   return (
     <div className="scrollContainer">
       {loading ? <div>loading data pls wait!</div> : null}
       <h1>SCROLL INDICATOR</h1>
+      <div className="scrollProgressContainer">
+        <div
+          className="scrollBar"
+          style={{ width: `${scrollPercentage}%` }}
+        ></div>
+      </div>
       <div className="dataContainer">
         {displayData && displayData.length > 0
           ? displayData.map((dataItem) => <p>{dataItem.title}</p>)
