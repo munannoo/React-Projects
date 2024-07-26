@@ -10,6 +10,7 @@ import QrGenerator from "./components/qr-generator/qrGenerator.jsx";
 import SearchAutoComplete from "./components/search-autocomplete/autoCompleteSearch.jsx";
 import TreeStructure from "./components/tree-view/treeView.jsx";
 import menus from "./components/tree-view/data.js";
+import ScrollIndicator from "./components/scroll-indicator/scrollindicator.jsx";
 function App() {
   return (
     <>
@@ -22,7 +23,8 @@ function App() {
       {/* <ModalPopUp /> */}
       {/* <QrGenerator /> */}
       {/* <SearchAutoComplete /> */}
-      <TreeStructure menus={menus} />
+      {/* <TreeStructure menus={menus} /> */}
+      <ScrollIndicator url={"https://dummyjson.com/products?limit=100"} />
     </>
   );
 }
