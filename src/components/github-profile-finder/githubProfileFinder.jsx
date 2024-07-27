@@ -44,7 +44,7 @@ export default function GithubProfileFinder() {
         <img src={userData.avatar_url} alt="github profile picture" />
         <h3>No of Repositories: {userData.public_repos}</h3>
         <h3>No of Followers: {userData.followers}</h3>
-        <h3>No of Following: {userData.followings}</h3>
+        <h3>No of Following: {userData.following}</h3>
       </div>
     </div>
   );
