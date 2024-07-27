@@ -234,6 +234,7 @@ p {
   grid-template-columns: auto auto;
   column-gap: 5rem;
   margin: 0;
+  padding: 1rem;
   align-items: center;
   justify-items: left;
 }

@@ -44,7 +44,9 @@ export default function GithubProfileFinder() {
           alt="github profile picture"
         />
         <h1 className="githubusername">
-          <a href={userData.html_url}>{userData.name}</a>
+          <a href={userData.html_url} target="_blank">
+            {userData.name}
+          </a>
         </h1>
         <h3>
           No of Repositories: <span>{userData.public_repos}</span>
