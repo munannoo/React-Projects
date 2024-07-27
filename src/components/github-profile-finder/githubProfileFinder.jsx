@@ -35,7 +35,15 @@ export default function GithubProfileFinder() {
         onChange={(e) => setUsername(e.target.value)}
       />
       <button onClick={handleDisplayUserProfile}>Search 🔎</button>
-      <div className="profileContianer"></div>
+      <div className="profileContianer">
+        <h2 className="githubusername">
+          <a href={userData.html_url}>{userData.name}</a>
+        </h2>
+        <img src={userData.avatar_url} alt="github profile picture" />
+        <h3>No of Repositories: {userData.public_repos}</h3>
+        <h3>No of Followers: {userData.followers}</h3>
+        <h3>No of Fllowing: {userData.followings}</h3>
+      </div>
     </div>
   );
 }
