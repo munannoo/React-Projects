@@ -38,13 +38,23 @@ export default function GithubProfileFinder() {
       />
       <button onClick={handleDisplayUserProfile}>Search 🔎</button>
       <div className="profileContianer">
-        <h2 className="githubusername">
+        <img
+          className="userProfilePicture"
+          src={userData.avatar_url}
+          alt="github profile picture"
+        />
+        <h1 className="githubusername">
           <a href={userData.html_url}>{userData.name}</a>
-        </h2>
-        <img src={userData.avatar_url} alt="github profile picture" />
-        <h3>No of Repositories: {userData.public_repos}</h3>
-        <h3>No of Followers: {userData.followers}</h3>
-        <h3>No of Following: {userData.following}</h3>
+        </h1>
+        <h3>
+          No of Repositories: <span>{userData.public_repos}</span>
+        </h3>
+        <h3>
+          No of Followers: <span>{userData.followers}</span>
+        </h3>
+        <h3>
+          No of Following: <span>{userData.following}</span>
+        </h3>
       </div>
     </div>
   );

@@ -225,3 +225,38 @@ p {
   background-color: white;
   height: 1rem;
 }
+
+.profileContianer {
+  border: 5px solid white;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  grid-template-columns: auto auto;
+  column-gap: 5rem;
+  margin: 0;
+  align-items: center;
+  justify-items: left;
+}
+
+.userProfilePicture {
+  border-radius: 50%;
+  width: 15rem;
+  height: 15rem;
+  grid-row: 1/5;
+}
+
+.githubusername {
+  padding: 0;
+  margin: 0;
+  text-decoration: underline;
+}
+
+.profileContianer > h3 {
+  padding: 0;
+  margin: 0;
+  color: rgb(175, 175, 175);
+}
+
+.profileContianer > h3 > span {
+  color: white;
+}
