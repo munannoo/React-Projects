@@ -11,6 +11,7 @@ import SearchAutoComplete from "./components/search-autocomplete/autoCompleteSea
 import TreeStructure from "./components/tree-view/treeView.jsx";
 import menus from "./components/tree-view/data.js";
 import ScrollIndicator from "./components/scroll-indicator/scrollindicator.jsx";
+import GithubProfileFinder from "./components/github-profile-finder/githubProfileFinder.jsx";
 function App() {
   return (
     <>
@@ -24,7 +25,8 @@ function App() {
       {/* <QrGenerator /> */}
       {/* <SearchAutoComplete /> */}
       {/* <TreeStructure menus={menus} /> */}
-      <ScrollIndicator url={"https://dummyjson.com/products?limit=100"} />
+      {/* <ScrollIndicator url={"https://dummyjson.com/products?limit=100"} /> */}
+      <GithubProfileFinder />
     </>
   );
 }
