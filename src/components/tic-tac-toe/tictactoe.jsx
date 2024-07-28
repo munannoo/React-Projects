@@ -1,24 +1,25 @@
+import "../styles.css";
 export default function TicTacToe() {
-  function Square({ value }) {
-    return <button>{value}</button>;
+  function Squares({ value }) {
+    return <button className="column ttt-button">{value}</button>;
   }
 
   return (
     <div className="tictactoeContainer">
       <div className="row">
-        <Square />
-        <Square />
-        <Square />
+        <Squares />
+        <Squares />
+        <Squares />
       </div>
       <div className="row">
-        <Square />
-        <Square />
-        <Square />
+        <Squares />
+        <Squares />
+        <Squares />
       </div>
       <div className="row">
-        <Square />
-        <Square />
-        <Square />
+        <Squares />
+        <Squares />
+        <Squares />
       </div>
     </div>
   );
