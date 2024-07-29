@@ -48,7 +48,7 @@ export default function TicTacToe() {
 
   function handleOnClick(getSqaure) {
     let cpySquare = [...squares];
-    if (getWinner(cpySquare[getSqaure]) || cpySquare[getSqaure]) return;
+    if (getWinner(cpySquare) || cpySquare[getSqaure]) return;
     cpySquare[getSqaure] = isOtrun ? "O" : "X";
     setisOtrun(!isOtrun);
     console.log(isOtrun);
