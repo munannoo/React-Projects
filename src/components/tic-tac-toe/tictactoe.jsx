@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import "../styles.css";
-import { WiNightLightning } from "react-icons/wi";
 
 export default function TicTacToe() {
   const [isOtrun, setisOtrun] = useState(true);
@@ -25,7 +24,7 @@ export default function TicTacToe() {
     }
   }, [squares, isOtrun]);
 
-  function getWinner() {
+  function getWinner(square) {
     let winPattern = [
       [0, 1, 2],
       [3, 4, 5],
@@ -40,12 +39,8 @@ export default function TicTacToe() {
     for (let i = 0; i < winPattern.length; i++) {
       const [x, y, z] = winPattern[i];
 
-      if (
-        squares[x] &&
-        squares[x] === squares[y] &&
-        squares[x] === squares[z]
-      ) {
-        return squares[x];
+      if (square[x] && square[x] === square[y] && square[x] === square[z]) {
+        return square[x];
       }
     }
     return null;
