@@ -13,7 +13,7 @@ export default function useFetch(url, options = {}) {
   async function fetchData() {
     try {
       const response = await fetch(url);
-      const result = response.jsion();
+      const result = await response.json();
       if (!response.ok) throw new Error(response.statusText);
       setData(result);
       setLoading(false);
