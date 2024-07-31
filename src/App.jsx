@@ -13,6 +13,7 @@ import menus from "./components/tree-view/data.js";
 import ScrollIndicator from "./components/scroll-indicator/scrollindicator.jsx";
 import GithubProfileFinder from "./components/github-profile-finder/githubProfileFinder.jsx";
 import TicTacToe from "./components/tic-tac-toe/tictactoe.jsx";
+import UseFetchHookTest from "./components/useFetch-hook/test.jsx";
 function App() {
   return (
     <>
@@ -28,7 +29,8 @@ function App() {
       {/* <TreeStructure menus={menus} /> */}
       {/* <ScrollIndicator url={"https://dummyjson.com/products?limit=100"} /> */}
       {/* <GithubProfileFinder /> */}
-      <TicTacToe />
+      {/* <TicTacToe /> */}
+      <UseFetchHookTest />
     </>
   );
 }
