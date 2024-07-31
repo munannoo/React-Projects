@@ -24,4 +24,6 @@ export default function useFetch(url, options = {}) {
       setLoading(false);
     }
   }
+
+  return { data, loading, error };
 }
