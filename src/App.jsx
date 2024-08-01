@@ -14,6 +14,7 @@ import ScrollIndicator from "./components/scroll-indicator/scrollindicator.jsx";
 import GithubProfileFinder from "./components/github-profile-finder/githubProfileFinder.jsx";
 import TicTacToe from "./components/tic-tac-toe/tictactoe.jsx";
 import UseFetchHookTest from "./components/useFetch-hook/test.jsx";
+import TestOutsideClick from "./components/useOnOutsideClick/test.jsx";
 function App() {
   return (
     <>
@@ -30,7 +31,8 @@ function App() {
       {/* <ScrollIndicator url={"https://dummyjson.com/products?limit=100"} /> */}
       {/* <GithubProfileFinder /> */}
       {/* <TicTacToe /> */}
-      <UseFetchHookTest />
+      {/* <UseFetchHookTest /> */}
+      <TestOutsideClick />
     </>
   );
 }
