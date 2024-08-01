@@ -3,7 +3,7 @@ import { useEffect } from "react";
 export default function useOnOutsideClick(ref, handler) {
   useEffect(() => {
     function listener(event) {
-      if (!ref.current || ref.current(event.target)) {
+      if (!ref.current || ref.current.contains(event.target)) {
         return;
       }
       handler(event);
