@@ -5,5 +5,14 @@ export default function ScrollTopBottom() {
     "https://dummyjson.com/products&limit=100",
     {}
   );
+
+  if (loading) {
+    return <h3>loading data pls wait...</h3>;
+  }
+
+  if (error) {
+    return <h3>an error has occured!</h3>;
+  }
+
   return <div></div>;
 }
