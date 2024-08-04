@@ -2,11 +2,11 @@ import useFetch from "../useFetch-hook/useFetch";
 
 export default function ScrollTopBottom() {
   const { data, error, pending } = useFetch(
-    "https://dummyjson.com/products&limit=100",
+    "https://dummyjson.com/products?limit=100",
     {}
   );
 
-  if (loading) {
+  if (pending) {
     return <h3>loading data pls wait...</h3>;
   }
 
