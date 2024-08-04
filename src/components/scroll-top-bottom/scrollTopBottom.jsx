@@ -14,5 +14,14 @@ export default function ScrollTopBottom() {
     return <h3>an error has occured!</h3>;
   }
 
-  return <div></div>;
+  return (
+    <div>
+      <h1>Scroll from Top to Bottom</h1>
+      <h3>this is the top section</h3>
+      {data && data.products && data.products.length
+        ? data.products.map((dataItem) => <p>{dataItem.title}</p>)
+        : null}
+      <h3>this is the bottom section</h3>
+    </div>
+  );
 }
