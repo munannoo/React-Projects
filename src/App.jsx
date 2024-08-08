@@ -18,6 +18,7 @@ import TestOutsideClick from "./components/useOnOutsideClick/test.jsx";
 import TestUseWindowResize from "./components/useWindowResize/test.jsx";
 import ScrollTopBottom from "./components/scroll-top-bottom/scrollTopBottom.jsx";
 import ScrollToParticularSection from "./components/scroll-to-particular-section/test.jsx";
+import FeatureFlagState from "./components/feature-flag/index.jsx";
 function App() {
   return (
     <>
@@ -38,7 +39,8 @@ function App() {
       {/* <TestOutsideClick /> */}
       {/* <TestUseWindowResize /> */}
       {/* <ScrollTopBottom /> */}
-      <ScrollToParticularSection />
+      {/* <ScrollToParticularSection /> */}
+      <FeatureFlagState />
     </>
   );
 }
