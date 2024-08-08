@@ -1,5 +1,3 @@
-const { RiEjectFill } = require("react-icons/ri");
-
 const dummyResponse = {
   showLightAndDarkMode: true,
   showTicTacToe: true,
@@ -14,3 +12,5 @@ function featureFlagDataServiceCall() {
     else reject("some error occured! try again");
   });
 }
+
+export default featureFlagDataServiceCall;
