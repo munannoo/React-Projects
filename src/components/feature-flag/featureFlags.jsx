@@ -30,6 +30,11 @@ export default function FeatureFlags() {
       component: <StarRating />,
     },
   ];
+
+  function checkEnabledFlags(getCurrentKey) {
+    return enabledFlags[getCurrentKey];
+  }
+
   if (loading) {
     return <h1>loading data pls wait...</h1>;
   }
@@ -37,6 +42,9 @@ export default function FeatureFlags() {
   return (
     <div>
       <h1>Feature Flags!</h1>
+      {componentsToRender.map((componentItem) =>
+        checkEnabledFlags(componentItem.key) ? componentItem.component : null
+      )}
     </div>
   );
 }

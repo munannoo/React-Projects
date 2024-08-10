@@ -1,8 +1,8 @@
 const dummyResponse = {
   showLightAndDarkMode: true,
   showTicTacToe: true,
-  showAccordian: false,
-  showTabs: true,
+  showAccordian: true,
+  showTabs: false,
   showStarRating: true,
 };
 
