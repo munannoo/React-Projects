@@ -1,3 +1,9 @@
 [submodule "weather-app"]
 	path = weather-app
 	url = https://github.com/munannoo/weather-app
+[submodule "tanstack-query"]
+	path = tanstack-query
+	url = https://github.com/munannoo/tanstack-query
+[submodule "recipe-app"]
+	path = recipe-app
+	url = https://github.com/munannoo/recipe-app
